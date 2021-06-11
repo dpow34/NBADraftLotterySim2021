@@ -44,6 +44,7 @@ function shuffle(array) {
 }
 
 function fill_1(){
+	pick1 = [];
 	for (i = 0; i < 140; i++) {
 		pick1.push("Rockets");
 		pick1.push("Pistons");
@@ -81,6 +82,7 @@ function fill_1(){
 }
 
 function fill_2(){
+	pick2 = [];
 	for (i = 0; i < 134; i++) {
 		pick2.push("Rockets");
 		pick2.push("Pistons");
@@ -118,6 +120,7 @@ function fill_2(){
 }
 
 function fill_3(){
+	pick3 = [];
 	for (i = 0; i < 127; i++) {
 		pick3.push("Rockets");
 		pick3.push("Pistons");
@@ -154,6 +157,7 @@ function fill_3(){
 }
 
 function fill_4(){
+	pick4 = [];
 	for (i = 0; i < 119; i++) {
 		pick4.push("Rockets");
 		pick4.push("Pistons");
@@ -190,6 +194,7 @@ function fill_4(){
 }
 
 function fill_5(){
+	pick5 = [];
 	for (i = 0; i < 479; i++) {
 		pick5.push("Rockets");
 	}
@@ -209,6 +214,7 @@ function fill_5(){
 }
 
 function fill_6(){
+	pick6 = [];
 	for (i = 0; i < 201; i++) {
 		pick6.push("Pistons");
 	}
@@ -228,6 +234,7 @@ function fill_6(){
 }
 
 function fill_7(){
+	pick7 = [];
 	for (i = 0; i < 71; i++) {
 		pick7.push("Magic");
 	}
@@ -247,6 +254,7 @@ function fill_7(){
 }
 
 function fill_8(){
+	pick8 = [];
 	for (i = 0; i < 24; i++) {
 		pick8.push("Thunder");
 	}
@@ -266,6 +274,7 @@ function fill_8(){
 }
 
 function fill_9(){
+	pick9 = [];
 	for (i = 0; i < 6; i++) {
 		pick9.push("Cavaliers");
 	}
@@ -286,6 +295,7 @@ function fill_9(){
 
 
 function fill_10(){
+	pick10 = [];
 	for (i = 0; i < 2; i++) {
 		pick10.push("Timberwolves");
 	}
@@ -305,6 +315,7 @@ function fill_10(){
 }
 
 function fill_11(){
+	pick11 = [];
 	for (i = 0; i < 5; i++) {
 		pick11.push("Bulls");
 	}
@@ -321,6 +332,7 @@ function fill_11(){
 }
 
 function fill_12(){
+	pick12 = [];
 	for (i = 0; i < 1; i++) {
 		pick12.push("Kings");
 	}
@@ -337,6 +349,7 @@ function fill_12(){
 }
 
 function fill_13(){
+	pick13 = [];
 	for (i = 0; i < 4; i++) {
 		pick13.push("Hornets");
 	}
@@ -350,6 +363,7 @@ function fill_13(){
 }
 
 function fill_14(){
+	pick14 = [];
 	for (i = 0; i < 1; i++) {
 		pick14.push("Spurs");
 	}
