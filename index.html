@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="lottery.js"></script>
 	 <link rel="stylesheet" href="lottery.css">
 	<title>NBA Draft Lottery Simulator 2021</title>
@@ -12,14 +12,14 @@
 		<br>
 		<br>
 		<img src="odds.png">
-		<pre>** Values representes as ">0.0" are not represented in the simulations **      Credit: <a href="http://www.tankathon.com/pick_odds">Tankathon</a></pre>
-		<br>
-		<br>
+		<pre>** Values represented as ">0.0" are not represented in the simulations **      Credit: <a href="http://www.tankathon.com/pick_odds">Tankathon</a></pre>
+
 		<form>
+			<h1>Draft Simulator</h1>
 			How many simulations would you like to run?
 			<br>
 			<input type="text" id="simulations" name="simulations">
-			<input type="button" value="Simulate" onclick="simulate()">
+			<input id="myBtn" type="button" value="Simulate" onclick="simulate()">
 		</form>
 		<br>
 		<br>
