@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="lottery.js"></script>
+	 <link rel="stylesheet" href="lottery.css">
+	<title>NBA Draft Lottery Simulator 2021</title>
+</head>
+<body>
+	<center>
+		<img width=300px height ="" src="nbalotto.webp">
+		<br>
+		<br>
+		<img src="odds.png">
+		<pre>** Values representes as ">0.0" are not represented in the simulations **      Credit: <a href="http://www.tankathon.com/pick_odds">Tankathon</a></pre>
+		<br>
+		<br>
+		<form>
+			How many simulations would you like to run?
+			<br>
+			<input type="text" id="simulations" name="simulations">
+			<input type="button" value="Simulate" onclick="simulate()">
+		</form>
+		<br>
+		<br>
+		<TABLE style="margin: 0px auto;" BORDER="5"    WIDTH="90%"   CELLPADDING="4" CELLSPACING="3">
+		   <TR>
+		      <TH>Team</TH>
+		      <TH>1st</TH>
+		      <TH>2nd</TH>
+		      <TH>3rd</TH>
+		      <TH>4th</TH>
+		      <TH>5th</TH>
+		      <TH>6th</TH>
+		      <TH>7th</TH>
+		      <TH>8th</TH>
+		      <TH>9th</TH>
+		      <TH>10th</TH>
+		      <TH>11th</TH>
+		      <TH>12th</TH>
+		      <TH>13th</TH>
+		      <TH>14th</TH>
+		   </TR>
+		   <TR id="1">
+		   		<td>Houston Rockets</td>
+		   		<td id="rock1"></td>
+		   		<td id="rock2"></td>
+		   		<td id="rock3"></td>
+		   		<td id="rock4"></td>
+		   		<td id="rock5"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="2">
+		   		<td>Detroit Pistons</td>
+		   		<td id="pist1"></td>
+		   		<td id="pist2"></td>
+		   		<td id="pist3"></td>
+		   		<td id="pist4"></td>
+		   		<td id="pist5"></td>
+		   		<td id="pist6"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="3">
+		   		<td>Orlando Magic</td>
+		   		<td id="mag1"></td>
+		   		<td id="mag2"></td>
+		   		<td id="mag3"></td>
+		   		<td id="mag4"></td>
+		   		<td id="mag5"></td>
+		   		<td id="mag6"></td>
+		   		<td id="mag7"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="4">
+		   		<td>OKC Thunder</td>
+		   		<td id="okc1"></td>
+		   		<td id="okc2"></td>
+		   		<td id="okc3"></td>
+		   		<td id="okc4"></td>
+		   		<td id="okc5"></td>
+		   		<td id="okc6"></td>
+		   		<td id="okc7"></td>
+		   		<td id="okc8"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="5">
+		   		<td>Cleveland Cavaliers</td>
+		   		<td id="cavs1"></td>
+		   		<td id="cavs2"></td>
+		   		<td id="cavs3"></td>
+		   		<td id="cavs4"></td>
+		   		<td id="cavs5"></td>
+		   		<td id="cavs6"></td>
+		   		<td id="cavs7"></td>
+		   		<td id="cavs8"></td>
+		   		<td id="cavs9"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="6">
+		   		<td>Minnesota Timberwolves</td>
+		   		<td id="wol1"></td>
+		   		<td id="wol2"></td>
+		   		<td id="wol3"></td>
+		   		<td id="wol4"></td>
+		   		<td id="na">X</td>
+		   		<td id="wol6"></td>
+		   		<td id="wol7"></td>
+		   		<td id="wol8"></td>
+		   		<td id="wol9"></td>
+		   		<td id="wol10"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="7">
+		   		<td>Toronto Raptors</td>
+		   		<td id="raps1"></td>
+		   		<td id="raps2"></td>
+		   		<td id="raps3"></td>
+		   		<td id="raps4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="raps7"></td>
+		   		<td id="raps8"></td>
+		   		<td id="raps9"></td>
+		   		<td id="raps10"></td>
+		   		<td id="noCalc">!</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="8">
+		   		<td>Chicago Bulls</td>
+		   		<td id="bull1"></td>
+		   		<td id="bull2"></td>
+		   		<td id="bull3"></td>
+		   		<td id="bull4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="bull8"></td>
+		   		<td id="bull9"></td>
+		   		<td id="bull10"></td>
+		   		<td id="bull11"></td>
+		   		<td id="noCalc">!</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="9">
+		   		<td>Sacramento Kings</td>
+		   		<td id="king1"></td>
+		   		<td id="king2"></td>
+		   		<td id="king3"></td>
+		   		<td id="king4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="king9"></td>
+		   		<td id="king10"></td>
+		   		<td id="king11"></td>
+		   		<td id="king12"></td>
+		   		<td id="noCalc">!</td>
+		   		<td id="na">X</td>
+		   </TR>
+		   <TR id="10">
+		   		<td>New Orleans Pelicans</td>
+		   		<td id="pel1"></td>
+		   		<td id="pel2"></td>
+		   		<td id="pel3"></td>
+		   		<td id="pel4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="pel10"></td>
+		   		<td id="pel11"></td>
+		   		<td id="pel12"></td>
+		   		<td id="noCalc">!</td>
+		   		<td id="noCalc">!</td>
+		   </TR>
+		   <TR id="11">
+		   		<td>Charolette Hornets</td>
+		   		<td id="horn1"></td>
+		   		<td id="horn2"></td>
+		   		<td id="horn3"></td>
+		   		<td id="horn4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="horn11"></td>
+		   		<td id="horn12"></td>
+		   		<td id="horn13"></td>
+		   		<td id="noCalc">!</td>
+		   </TR>
+		   <TR id="12">
+		   		<td>San Antonio Spurs</td>
+		   		<td id="spur1"></td>
+		   		<td id="spur2"></td>
+		   		<td id="spur3"></td>
+		   		<td id="spur4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="spur12"></td>
+		   		<td id="spur13"></td>
+		   		<td id="spur14"></td>
+		   </TR>
+		   <TR id="13">
+		   		<td>Indiana Pacers</td>
+		   		<td id="pace1"></td>
+		   		<td id="pace2"></td>
+		   		<td id="pace3"></td>
+		   		<td id="pace4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="pace13"></td>
+		   		<td id="pace14"></td>
+		   </TR>
+		   <TR id="14">
+		   		<td>Golden State Warriors</td>
+		   		<td id="war1"></td>
+		   		<td id="war2"></td>
+		   		<td id="war3"></td>
+		   		<td id="war4"></td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="na">X</td>
+		   		<td id="war14"></td>
+		   </TR>
+
+	</center>
+
+</body>
+</html>
